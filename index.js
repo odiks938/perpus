@@ -3,9 +3,9 @@ import cors from "cors";
 
 import connection from "./config/db.config.js";
 
-import bookRouter from "./routes/book.js";
-import departementRouter from "./routes/departement.js";
-import studentRouter from "./routes/student.js";
+import bookRouter from "./routes/book.route.js";
+import departementRouter from "./routes/departement.route.js";
+import studentRouter from "./routes/student.route.js";
 import loanRouter from "./routes/loan.route.js";
 
 const app = express();
