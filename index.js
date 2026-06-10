@@ -14,6 +14,8 @@ try {
   console.log("Failed to connect to database", err);
 }
 
+
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -52,12 +54,6 @@ app.listen(5000);
         }
     ]
 }
- * 
- * 
- * 
- * 
- * 
- * 
  * 
  * pengembalian
  * {
