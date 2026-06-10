@@ -8,7 +8,7 @@ import cors from "cors";
 
 const app = express();
 try {
-  await connection.authenticate();
+  await db.authenticate();
   console.log("Database connected!");
 
   await db.sync();
