@@ -10,6 +10,9 @@ const app = express();
 try {
   await connection.authenticate();
   console.log("Database connected!");
+
+  await db.sync();
+  console.log ("Database synced");
 } catch (err) {
   console.log("Failed to connect to database", err);
 }
