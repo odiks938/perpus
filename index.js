@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 
-import connection from "./config/db.js";
+import connection from "./config/db.config.js";
 
 import bookRouter from "./routes/book.js";
 import departementRouter from "./routes/departement.js";
