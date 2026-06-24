@@ -7,7 +7,7 @@ import bookRouter from "./routes/book.route.js";
 import departementRouter from "./routes/departement.route.js";
 import studentRouter from "./routes/student.route.js";
 import loanRouter from "./routes/loan.route.js";
-import userRouter from "./routes/user.route.js";
+
 
 const app = express();
 
@@ -28,7 +28,6 @@ app.use("/api/buku", bookRouter);
 app.use("/api/kampus", departementRouter);
 app.use("/api/siswa", studentRouter);
 app.use("/api/pinjam", loanRouter);
-app.use("/api/user", userRouter);
 
 // 404 Handler
 app.use((req, res) => {
