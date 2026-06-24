@@ -27,8 +27,14 @@ const login = async (req, res) => {
        const user = login[0]; 
        // Verifikasi password 
         const isMatch = await bcrypt.compare(password, user.password); 
+        if (!isMatch) return res.status(401).send("Invalid Credentials");
+        // generate token
+        const token = jwt.sign({ id: user.id}, "your jwt secret", { expiresIn: "1h" });
+        res.json({ token });
         
-  } catch (error) {}
+  } catch (error) {
+    res.json({ message: error.message });
+  }
 };
 
 export default { register, login };
