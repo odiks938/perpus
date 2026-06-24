@@ -28,7 +28,6 @@ app.use("/api/buku", bookRouter);
 app.use("/api/kampus", departementRouter);
 app.use("/api/siswa", studentRouter);
 app.use("/api/pinjam", loanRouter);
-app.use("/api/prodi"), studentRouter;
 // 404 Handler
 app.use((req, res) => {
   res.status(404).json({
